@@ -1,30 +1,6 @@
--- ============================================================
--- PROJECT 2: HR EMPLOYEE ATTRITION ANALYSIS
--- SQL Script: Data Retrieval Only
--- Dataset: IBM HR Analytics Employee Attrition (Kaggle)
--- Tool: MySQL Workbench
--- ============================================================
--- YOUR WORKFLOW:
--- Step 1 → Run these queries to explore the data
--- Step 2 → Export to CSV using the export button in Workbench
--- Step 3 → Open in Excel for cleaning and analysis
--- Step 4 → Build final dashboard in Power BI
---
--- HOW TO IMPORT FIRST:
--- 1. Download IBM HR Analytics dataset from Kaggle (.csv)
--- 2. Open MySQL Workbench
--- 3. Run CREATE DATABASE + CREATE TABLE below
--- 4. Right-click hr_attrition table → Table Data Import Wizard
---    → Select your CSV → Finish
--- ============================================================
-
-
--- STEP 1: Create database
 CREATE DATABASE IF NOT EXISTS HRAnalyticsDB;
 USE HRAnalyticsDB;
 
-
--- STEP 2: Create table structure
 CREATE TABLE IF NOT EXISTS hr_attrition (
     age                         INT,
     attrition                   VARCHAR(5),
@@ -63,35 +39,10 @@ CREATE TABLE IF NOT EXISTS hr_attrition (
     years_with_curr_manager     INT
 );
 
-
--- ============================================================
--- QUERY 1: Quick check — how many employees loaded?
--- ============================================================
 SELECT COUNT(*) AS total_employees FROM hr_attrition;
--- Expected: 1,470
 
-
--- ============================================================
--- QUERY 2: Preview the data
--- Get familiar with the columns before exporting.
--- ============================================================
 SELECT * FROM hr_attrition LIMIT 20;
 
--- KEY COLUMNS TO UNDERSTAND:
--- attrition         → 'Yes' (left) or 'No' (stayed)
--- department        → which team they work in
--- job_role          → their specific position
--- monthly_income    → their salary
--- years_at_company  → how long they have worked there
--- over_time         → 'Yes' or 'No'
--- job_satisfaction  → 1=Low, 2=Medium, 3=High, 4=Very High
--- work_life_balance → 1=Bad, 2=Good, 3=Better, 4=Best
-
-
--- ============================================================
--- QUERY 3: Quick attrition split
--- Just to understand the data before exporting.
--- ============================================================
 SELECT
     attrition,
     COUNT(*) AS count
@@ -99,10 +50,6 @@ FROM hr_attrition
 GROUP BY attrition;
 
 
--- ============================================================
--- QUERY 4: Export the full dataset to Excel
--- Run this → click export icon → save as hr_raw.csv
--- ============================================================
 SELECT
     age,
     attrition,
@@ -126,9 +73,3 @@ SELECT
     total_working_years,
     training_times_last_year
 FROM hr_attrition;
-
--- ============================================================
--- That is all the SQL you need for this project.
--- Save exported file as: hr_raw.csv
--- Now open it in Excel and follow the excel_powerbi_guide.md
--- ============================================================
