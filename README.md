@@ -52,4 +52,4 @@ Employees with under 25 years have a 39.18% attrition rate vs 10.10% for those i
 
 
 ## Dashboard
-🔗 [View Live Power BI Dashboard](<iframe title="HR Attrition Analysis" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiY2MxZjQyMzEtZGQ0NC00NjA4LWEwNmMtYmRhNDFhYmFjMzViIiwidCI6ImI4ZTY4ZTg5LWZiZGMtNDkxYS1iOGMyLWY1Nzk2ZTFhNDBiOSIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>)
+🔗 [View Live Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiY2MxZjQyMzEtZGQ0NC00NjA4LWEwNmMtYmRhNDFhYmFjMzViIiwidCI6ImI4ZTY4ZTg5LWZiZGMtNDkxYS1iOGMyLWY1Nzk2ZTFhNDBiOSIsImMiOjl9)
